@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: crud-laravel
+      MYSQL_ROOT_PASSWORD: docker
+    ports:
+      - 3306:3306
+    volumes:
+      - db:/var/lib/mysql
+
+volumes:
+  db:
+    driver: local
