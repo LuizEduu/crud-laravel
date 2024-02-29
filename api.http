@@ -1,5 +1,6 @@
-POST http://localhost:8000/users
+POST http://localhost:8000/api/users
 content-type: application/json
+Authorization: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3Nlc3Npb24iLCJpYXQiOjE3MDkxNjQ5MzEsImV4cCI6MTcwOTE2ODUzMSwibmJmIjoxNzA5MTY0OTMxLCJqdGkiOiJCYlExeWpuZDdUdk5uQU9yIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.rZ-m52LOXcSFlt--Pt_LzeA9N_BJAu7fPtKlHpSbrHw"
 
 {
     "name": "Luiz Eduardo",
@@ -8,10 +9,11 @@ content-type: application/json
 }
 ###
 
-GET http://localhost:8000/users/2
+GET http://localhost:8000/api/users/2
+content-type: application/json
 ###
 
-PUT http://localhost:8000/users/2
+PUT http://localhost:8000/api/users/2
 content-type: application/json
 
 {
@@ -23,6 +25,26 @@ content-type: application/json
 DELETE http://localhost:8000/users/1
 ###
 
+POST http://localhost:8000/api/products
+content-type: application/json
 
-GET http://localhost:8000/session
+{
+    "name": "fralda",
+    "category": "farmacia",
+    "quantity": 100
+}
 ###
+
+GET http://localhost:8000/api/products/01703720-c34f-48b1-aedb-32696876c1e5
+###
+
+POST http://localhost:8000/api/auth/login
+content-type: application/json
+
+{
+    "email": "test23@gmail.com",
+    "password": "teste123"
+}
+###
+GET http://localhost:8000/api/auth/me
+Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MDkyMjI4NDUsImV4cCI6MTcwOTIyNjQ0NSwibmJmIjoxNzA5MjIyODQ1LCJqdGkiOiJMR0hidGhNRzZxMzZPMHd6Iiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.FONet_P8ytDebl4AgDyRwJKY2K1bHyeXJU42qFYdGPE"
