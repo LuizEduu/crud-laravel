@@ -29,9 +29,9 @@ POST http://localhost:8000/api/products
 content-type: application/json
 
 {
-    "name": "fralda",
+    "name": "dipirona",
     "category": "farmacia",
-    "quantity": 100
+    "quantity": 500
 }
 ###
 
@@ -48,3 +48,10 @@ content-type: application/json
 ###
 GET http://localhost:8000/api/auth/me
 Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MDkyMjI4NDUsImV4cCI6MTcwOTIyNjQ0NSwibmJmIjoxNzA5MjIyODQ1LCJqdGkiOiJMR0hidGhNRzZxMzZPMHd6Iiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.FONet_P8ytDebl4AgDyRwJKY2K1bHyeXJU42qFYdGPE"
+###
+
+POST http://localhost:8000/api/orders/product/48faeb75-31b0-4390-a9e7-529c6107b5ac/user/a256f4b2-c63e-4a9c-9bca-71398c86af7a
+content-type: application/json
+###
+
+GET http://localhost:8000/api/orders/user/a256f4b2-c63e-4a9c-9bca-71398c86af7a

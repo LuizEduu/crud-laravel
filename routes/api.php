@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -22,3 +23,6 @@ Route::delete('/users/{id}', [UserController::class, 'delete']);
 
 Route::post('/products', [ProductsController::class, 'create']);
 Route::get('/products/{id}', [ProductsController::class, 'findById']);
+
+Route::post('/orders/product/{product_id}/user/{user_id}', [OrderController::class, 'save']);
+Route::get('/orders/user/{user_id}', [OrderController::class, 'findByUserId']);
